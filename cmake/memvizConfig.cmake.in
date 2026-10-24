@@ -1,0 +1,9 @@
+@PACKAGE_INIT@
+
+# memviz is header-only; the only dependency it carries is the thread library.
+include(CMakeFindDependencyMacro)
+find_dependency(Threads)
+
+include("${CMAKE_CURRENT_LIST_DIR}/memvizTargets.cmake")
+
+check_required_components(memviz)
